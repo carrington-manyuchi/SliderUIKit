@@ -9,9 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     private let myNewSLider: UISlider = {
-        
         let slider = UISlider()
         slider.translatesAutoresizingMaskIntoConstraints = false
         slider.value = 0.5
@@ -22,11 +20,15 @@ class ViewController: UIViewController {
         slider.maximumValueImage = UIImage(systemName: "paperplane")
         slider.isContinuous = true
         
-        
         slider.minimumTrackTintColor = UIColor.lightGray
         slider.maximumTrackTintColor =  UIColor.red
         //slider.thumbTintColor = .white
         return slider
+    }()
+    
+    private let userProfile: UIImageView = {
+        let imageView = UIImageView()
+        return imageView
     }()
 
     override func viewDidLoad() {
@@ -47,10 +49,8 @@ class ViewController: UIViewController {
             
         ]
         
-        
         NSLayoutConstraint.activate(myNewSLiderConstraint)
     }
-
 
 }
 
